@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}" type="text/css">
+</head>
+
+<body>
+<main class="container">
+    {% block content %}
+        {{ content }}
+    {% endblock %}
+</main>
+</body>
+</html>
